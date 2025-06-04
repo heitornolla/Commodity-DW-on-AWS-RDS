@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: awsdbt
+    schema: public
+    tables:
+      - name: commodities
+        description: "Commodities sales history"
+        columns:
+          - name: Date
+            description: "Date of observation"
+          - name: Close
+            description: "Closure Price"
+          - name: symbol
+            description: "Commodity Symbol"
+
+      - name: commodities_transactions
+        description: "Seed table"
+        columns:
+          - name: date
+            description: "Transaction date"
+          - name: symbol
+            description: "Commodity Symbol"
+          - name: action
+            description: "Transaction type (buy/sell)"
+          - name: quantity
+            description: "Transaction amount"

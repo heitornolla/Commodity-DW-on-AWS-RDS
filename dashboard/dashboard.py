@@ -60,12 +60,3 @@ else:
 
     st.write("### Summary")
     st.write(df.describe())
-
-
-    st.write("### Graphs")
-
-
-    st.bar_chart(df[['date', 'earnings']].set_index('date'))
-
-
-    st.line_chart(df[['date', 'closing_price']].set_index('date'))

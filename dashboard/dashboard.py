@@ -25,7 +25,7 @@ def get_data():
     SELECT
         date,
         symbol,
-        closing_value,
+        closing_price,
         action,
         quantity,
         value,
@@ -68,4 +68,4 @@ else:
     st.bar_chart(df[['date', 'earnings']].set_index('date'))
 
 
-    st.line_chart(df[['date', 'closing_value']].set_index('date'))
+    st.line_chart(df[['date', 'closing_price']].set_index('date'))

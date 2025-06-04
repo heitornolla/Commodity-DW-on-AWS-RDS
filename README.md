@@ -1,6 +1,4 @@
-# dbt-pipeline
-
-# Commodity Data Warehouse Project
+# Commodity Data Warehouse
 
 ## Overview
 
@@ -50,3 +48,35 @@ graph TD
 
     G --> K[Streamlit Dashboard]
 ```
+
+## Technologies Used
+
+- **Python** – for API integration and data loading
+- **PostgreSQL (AWS RDS)** – as the data warehouse
+- **DBT** – for data modeling and transformation
+- **Streamlit** – for interactive dashboard visualization
+
+## Getting Started
+
+1. Run the `extract_load.py` script to populate the PostgreSQL DB with API data:
+
+   ```bash
+   python extract_load.py
+   ```
+
+2. Use dbt seed to load CSV-based seed data:
+
+   ```bash
+   dbt seed
+   ```
+
+3. Run DBT models:
+
+   ```bash
+   dbt run
+   ```
+
+4. Launch the Streamlit dashboard:
+   ```bash
+   streamlit run app.py
+   ```

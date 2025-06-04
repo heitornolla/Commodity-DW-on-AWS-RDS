@@ -80,3 +80,5 @@ graph TD
    ```bash
    streamlit run app.py
    ```
+
+If you get any error, first **ensure that the year on the .csv files match the year we are currently on**

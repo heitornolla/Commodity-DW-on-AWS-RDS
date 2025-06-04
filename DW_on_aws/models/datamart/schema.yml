@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dm_commodities
+    description: "Datamart for all data related to commodities transactions"
+    columns:
+      - name: date
+        description: "Observation date"
+      - name: symbol
+        description: "Commodity symbol"
+      - name: closing_value
+        description: "Commodity closing value"
+      - name: action
+        description: "Transaction type (buy/sell)"
+      - name: quantity
+        description: "Amount bought/sold"
+      - name: value
+        description: "Transaction value"
+      - name: earnings
+        description: "Earnings from the transaction"

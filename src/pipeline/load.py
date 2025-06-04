@@ -20,7 +20,7 @@ DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 engine = create_engine(DATABASE_URL)
 
 
-def save_to_postgres_rds(df, schema='public'):
+def load_to_postgres_rds(df, schema='public'):
   df.to_sql('commodities', engine, if_exists='replace', index=True, index_label='Date', schema=schema)
 
   print(f'Saved to {schema}')
@@ -28,4 +28,4 @@ def save_to_postgres_rds(df, schema='public'):
 
 if __name__ == "__main__":
   data = get_all_commodity_data()
-  save_to_postgres_rds(data, schema='public')
+  load_to_postgres_rds(data, schema='public')

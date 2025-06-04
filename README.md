@@ -36,7 +36,7 @@ graph TD
     A[Commodities API] --> B[Extract_Load]
     B --> C[get_commodity_data]
     C --> D[load_to_postgres]
-    D --> E[PostgreSQL (AWS RDS)]
+    D --> E[PostgreSQL(AWS RDS)]
     E --> F[Data Warehouse]
 
     subgraph DBT [Transform - DBT]

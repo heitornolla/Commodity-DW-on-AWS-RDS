@@ -33,22 +33,20 @@ This project implements a modern Data Warehouse (DW) architecture designed to st
 
 ```mermaid
 graph TD
-    A[Commodities API] --> B[Extract_Load]
-    B --> C[get_commodity_data]
-    C --> D[load_to_postgres]
-    D --> E[PostgreSQL / AWS RDS]
-    E --> F[Data Warehouse]
+    A[Commodities API] --> B[Extract]
+    B --> C[Load into Postgres - AWS RDS]
+    C --> D[Data Warehouse]
 
     subgraph DBT [Transform - DBT]
-        F --> G[stg_commodities.sql]
-        G --> H[stg_commodities_transactions.sql]
-        H --> I[dm_commodities.sql]
+        D --> E[stg_commodities.sql]
+        E --> F[stg_commodities_transactions.sql]
+        F --> G[dm_commodities.sql]
     end
 
     subgraph Seeds
-        J[CSV Files] --> K[DBT Seed]
-        K --> F
+        H[CSV Files] --> I[DBT Seed]
+        I --> D
     end
 
-    I --> M[Streamlit Dashboard]
+    G --> K[Streamlit Dashboard]
 ```

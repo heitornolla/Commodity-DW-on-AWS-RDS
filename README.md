@@ -27,7 +27,7 @@ This project implements a modern Data Warehouse (DW) architecture designed to st
 
 ---
 
-## Project Architecture (Mermaid Diagram)
+## Project Architecture
 
 ```mermaid
 graph TD

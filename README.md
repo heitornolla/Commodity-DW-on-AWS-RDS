@@ -8,8 +8,8 @@ This project implements a modern Data Warehouse (DW) architecture designed to st
 
 1. **Extract & Load**
 
-   - Extracts data from an external **Commodities API**.
-   - Loads the data into a **PostgreSQL** database hosted on **AWS RDS**.
+   - Extracts data from external **Commodities API**.
+   - Loads the data into **PostgreSQL** database hosted on **AWS RDS**.
 
 2. **Seed Data**
 
